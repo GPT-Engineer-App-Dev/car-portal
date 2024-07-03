@@ -24,6 +24,16 @@ const Layout = () => {
       <main className="flex-grow p-4 overflow-auto">
         <Outlet />
       </main>
+      <footer className="border-t bg-background py-4 text-center">
+        <div className="container mx-auto px-4">
+          <p>&copy; 2023 Car World. All rights reserved.</p>
+          <div className="flex justify-center space-x-4 mt-2">
+            <a href="#" className="text-muted-foreground hover:text-foreground">Facebook</a>
+            <a href="#" className="text-muted-foreground hover:text-foreground">Twitter</a>
+            <a href="#" className="text-muted-foreground hover:text-foreground">Instagram</a>
+          </div>
+        </div>
+      </footer>
     </div>
   );
 };
@@ -35,7 +45,7 @@ const DesktopNav = () => (
       className="flex items-center gap-2 text-lg font-semibold md:text-base"
     >
       <Package2 className="h-6 w-6" />
-      <span className="sr-only">Acme Inc</span>
+      <span className="sr-only">Car World</span>
     </NavItem>
     {navItems.map((item) => (
       <NavItem key={item.to} to={item.to}>
@@ -60,7 +70,7 @@ const MobileNav = () => (
           className="flex items-center gap-2 text-lg font-semibold"
         >
           <Package2 className="h-6 w-6" />
-          <span className="sr-only">Acme Inc</span>
+          <span className="sr-only">Car World</span>
         </NavItem>
         {navItems.map((item) => (
           <NavItem key={item.to} to={item.to}>
